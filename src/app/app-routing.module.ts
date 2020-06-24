@@ -8,8 +8,64 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'welcome',
     pathMatch: 'full'
+  },
+  {
+    path: 'country-list',
+    loadChildren: () => import('./country-list/country-list.module').then( m => m.CountryListPageModule)
+  },
+  {
+    path: 'atlanta',
+    loadChildren: () => import('./atlanta/atlanta.module').then( m => m.AtlantaPageModule)
+  },
+  {
+    path: 'boston',
+    loadChildren: () => import('./boston/boston.module').then( m => m.BostonPageModule)
+  },
+  {
+    path: 'colombus',
+    loadChildren: () => import('./colombus/colombus.module').then( m => m.ColombusPageModule)
+  },
+  {
+    path: 'denver',
+    loadChildren: () => import('./denver/denver.module').then( m => m.DenverPageModule)
+  },
+  {
+    path: 'houston',
+    loadChildren: () => import('./houston/houston.module').then( m => m.HoustonPageModule)
+  },
+  {
+    path: 'losangeles',
+    loadChildren: () => import('./losangeles/losangeles.module').then( m => m.LosangelesPageModule)
+  },
+  {
+    path: 'louisville',
+    loadChildren: () => import('./louisville/louisville.module').then( m => m.LouisvillePageModule)
+  },
+  {
+    path: 'miami',
+    loadChildren: () => import('./miami/miami.module').then( m => m.MiamiPageModule)
+  },
+  {
+    path: 'newyork',
+    loadChildren: () => import('./newyork/newyork.module').then( m => m.NewyorkPageModule)
+  },
+  {
+    path: 'portland',
+    loadChildren: () => import('./portland/portland.module').then( m => m.PortlandPageModule)
+  },
+  {
+    path: 'rayleigh',
+    loadChildren: () => import('./rayleigh/rayleigh.module').then( m => m.RayleighPageModule)
+  },
+  {
+    path: 'tucson',
+    loadChildren: () => import('./tucson/tucson.module').then( m => m.TucsonPageModule)
+  },
+  {
+    path: 'welcome',
+    loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
   },
 ];
 
